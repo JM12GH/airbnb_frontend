@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <nav class="navbar navbar-expand-lg">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="logo" width="80" height="50" />
+              </a>
+              <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex navpos" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#" id="nav-stays">Stays</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" id="nav-experiences">Experiences</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Online Experiences</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="d-flex justify-content-around">
+                <ul class="navbar-nav">
+                  <li class="nav-item d-none d-lg-block">
+                    <a class="nav-link" href="#">Airbnb your home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#scrollableModal">
+                    <i class="d-none d-md-inline fas fa-globe"></i>
+                    </a>
+                  </li>
+                  <!--dropdown menu -->
+                  <li class="nav-item dropdown d-none d-lg-block">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fas fa-bars"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item" href="#">Sign up</a></li>
+                      <li><a class="dropdown-item" href="#">Log in</a></li>
+                      <li><hr class="dropdown-divider"/></li>
+                      <li><a class="dropdown-item" href="#">Gift cards</a></li>
+                      <li><a class="dropdown-item" href="#">Airbnb your home</a></li>
+                      <li><a class="dropdown-item" href="#">Help center</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="container">
+        <div class="row">
+          <nav class="navbar navbar-expand-lg d-none d-lg-block">
+            <div class="container">
+              <div
+                class="collapse navbar-collapse justify-content-center"
+                id="navbarNav"
+              >
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <div
+                      class="border border-secondary rounded p-0.5 m-0.3 bg-light"
+                    >
+                      <div
+                        class="btn-group"
+                        role="group"
+                        aria-label="Basic checkbox toggle button group"
+                      >
+                        <button class="nav-link btn btn-light">
+                          <h1 class="hsize">Where</h1>
+                          <p class="psize">Search destination</p>
+                        </button>
+                        <div class="divider-vertical"></div>
+                        <button
+                          class="nav-link checkIncheckOut-btn btn btn-light"
+                        >
+                          <h1 class="hsize">Check in</h1>
+                          <p class="psize">Add dates</p>
+                        </button>
+
+                        <div class="divider-vertical checkIncheckOut-btn"></div>
+
+                        <button
+                          class="nav-link checkIncheckOut-btn btn btn-light"
+                        >
+                          <h1 class="hsize">Check out</h1>
+                          <p class="psize">Add dates</p>
+                        </button>
+
+                        <div class="divider-vertical checkIncheckOut-btn"></div>
+
+                        <button class="nav-link date-btn d-none btn btn-light">
+                          <h1 class="hsize">Date</h1>
+                          <p class="psize">Add date</p>
+                        </button>
+
+                        <div class="divider-vertical date-btn d-none"></div>
+
+                        <button class="nav-link btn btn-light">
+                          <h1 class="hsize">Who</h1>
+                          <p class="psize">Add guests</p>
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <br />
+    <!-- swiper-pagination -->
+    <!-- Owl Carousel -->
+    <div class="container position-relative">
+      <div class="row">
+        <div class="col">
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <button id="users-icon" class="owlbtn btn-light">
+                <div class="d-flex align-items-center">
+                  <i class="fas fa-user me-2"></i>
+                  <p class="mb-0 fs-8">Users</p>
+                </div>
+              </button>
+            </div>
+            <div class="item">
+              <button id="users-icon" class="owlbtn btn-light">
+                <div class="d-flex align-items-center">
+                  <i class="fas fa-chess-rook me-2"></i>
+                  <p class="mb-0 fs-8">Castles</p>
+                </div>
+              </button>
+            </div>
+            <div class="item">
+              <button id="users-icon" class="owlbtn btn-light">
+                <div class="d-flex align-items-center">
+                  <i class="fas fa-gem me-2"></i>
+                  <p class="mb-0 fs-8">Luxe</p>
+                </div>
+              </button>
+            </div>
+            <div class="item">
+              <button id="users-icon" class="owlbtn btn-light">
+                <div class="d-flex align-items-center">
+                  <i class="fas fa-fire me-2"></i>
+                  <p class="mb-0 fs-8">Trending</p>
+                </div>
+              </button>
+            </div>
+            <div class="item">
+              <button id="users-icon" class="owlbtn btn-light">
+                <div class="col d-flex align-items-center">
+                  <i class="fas fa-palette me-2"></i>
+                  <p class="mb-0 fs-8">Design</p>
+                </div>
+              </button>
+            </div>
+            <div class="item">
+              <button id="users-icon" class="owlbtn btn-light">
+                <div class="col d-flex align-items-center">
+                  <i class="fas fa-building me-2"></i>
+                  <p class="mb-0 fs-8">Mansions</p>
+                </div>
+              </button>
+            </div>
+            <div class="item">
+              <button id="users-icon" class="owlbtn btn-light">
+                <div class="col d-flex align-items-center">
+                  <i class="fas fa-umbrella-beach me-2"></i>
+                  <p class="mb-0 fs-16">BeachFront</p>
+                </div>
+              </button>
+            </div>
+            <div class="item">
+              <button id="users-icon" class="owlbtn btn-light">
+                <div class="col d-flex align-items-center">
+                  <i class="fas fa-snowflake me-2"></i>
+                  <p class="mb-0 fs-8">Artic</p>
+                </div>
+              </button>
+            </div>
+            <div class="item">
+              <button id="users-icon" class="owlbtn btn-light">
+                <div class="col d-flex align-items-center">
+                  <i class="fas fa-water me-2"></i>
+                  <p class="mb-0 fs-8">Lakefront</p>
+                </div>
+              </button>
+            </div>
+            <div class="item">
+              <button id="users-icon" class="owlbtn btn-light">
+                <div class="col d-flex align-items-center">
+                  <i class="fas fa-gem me-2"></i>
+                  <p class="mb-0 fs-8">Gem</p>
+                </div>
+              </button>
+            </div>
+            <div class="item">
+              <button id="users-icon" class="owlbtn btn-light">
+                <div class="col d-flex align-items-center">
+                  <i class="fas fa-water me-2"></i>
+                  <p class="mb-0 fs-8">Water</p>
+                </div>
+              </button>
+            </div>
+            <div class="item">
+              <button id="users-icon" class="owlbtn btn-light">
+                <div class="col d-flex align-items-center">
+                  <i class="fas fa-palette me-2"></i>
+                  <p class="mb-0 fs-8">Design</p>
+                </div>
+              </button>
+            </div>
+            <div class="item">
+              <button id="users-icon" class="owlbtn btn-light">
+                <div class="col d-flex align-items-center">
+                  <i class="fas fa-building me-2"></i>
+                  <p class="mb-0 fs-8">Building</p>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        id="prev-btn"
+        type="button"
+        class="btn btn-light position-absolute start-0 top-50 translate-middle-y"
+      >
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button
+        id="next-btn"
+        type="button"
+        class="btn btn-light position-absolute end-0 top-50 translate-middle-y"
+      >
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+    <!--cards,first row-->
+    <div class="container mt-5 active">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-3" id="card-container">
+        <div class="col">
+          <div class="card h-100">
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./images/img1.JPG" class="d-block w-100" alt="...">
+                </div>
+                  <div class="carousel-item">
+                    <img src="./images/img2.JPG" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/img3.JPG" class="d-block w-100" alt="...">
+                    
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title 1</h5>
+              <p class="card-text">
+                This is a card with supporting text below.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div id="carouselExampleCaptions1" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./images/img4.JPG" class="d-block w-100" alt="...">
+                </div>
+                  <div class="carousel-item">
+                    <img src="./images/img5.JPG" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/img1.JPG" class="d-block w-100" alt="...">
+                    
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title 2</h5>
+              <p class="card-text">This is another short card.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div id="carouselExampleCaptions2" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./images/img2.JPG" class="d-block w-100" alt="...">
+                </div>
+                  <div class="carousel-item">
+                    <img src="./images/img3.JPG" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/img4.JPG" class="d-block w-100" alt="...">
+                    
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title 3</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div id="carouselExampleCaptions3" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./images/img5.JPG" class="d-block w-100" alt="...">
+                </div>
+                  <div class="carousel-item">
+                    <img src="./images/img1.JPG" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/img2.JPG" class="d-block w-100" alt="...">
+                    
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title 4</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div id="carouselExampleCaptions4" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./images/img3.JPG" class="d-block w-100" alt="...">
+                </div>
+                  <div class="carousel-item">
+                    <img src="./images/img4.JPG" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/img5.JPG" class="d-block w-100" alt="...">
+                    
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions4" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title 5</h5>
+              <p class="card-text">
+                This is a card with supporting text below.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div id="carouselExampleCaptions5" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions5" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions5" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions5" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./images/img2.JPG" class="d-block w-100" alt="...">
+                </div>
+                  <div class="carousel-item">
+                    <img src="./images/img1.JPG" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/img5.JPG" class="d-block w-100" alt="...">
+                    
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions5" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions5" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title 6</h5>
+              <p class="card-text">This is another short card.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div id="carouselExampleCaptions6" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions6" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions6" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions6" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./images/img4.JPG" class="d-block w-100" alt="...">
+                </div>
+                  <div class="carousel-item">
+                    <img src="./images/img3.JPG" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/img1.JPG" class="d-block w-100" alt="...">
+                    
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions6" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions6" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title 7</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div id="carouselExampleCaptions7" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions7" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions7" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions7" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./images/img3.JPG" class="d-block w-100" alt="...">
+                </div>
+                  <div class="carousel-item">
+                    <img src="./images/img4.JPG" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/img1.JPG" class="d-block w-100" alt="...">
+                    
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions7" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions7" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title 8</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <!--footer-->
+    <footer class="footer">
+      <div class="container">
+        <h5>Inspiration for future getaways</h5>
+        <!-- Tab navigation section -->
+        <div class="d-none d-md-flex justify-content-start">
+          <ul class="nav nav-underline" id="myTab" role="tablist">
+            <li class="nav-item">
+              <button
+                class="nav-link active linkdesign"
+                id="popular-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#popular"
+                type="button"
+                role="tab"
+                aria-controls="popular"
+                aria-selected="true"
+              >
+                Popular
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link linkdesign"
+                id="arts-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#arts"
+                type="button"
+                role="tab"
+                aria-controls="arts"
+                aria-selected="false"
+              >
+                Arts & Culture
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link linkdesign"
+                id="outdoors-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#outdoors"
+                type="button"
+                role="tab"
+                aria-controls="outdoors"
+                aria-selected="false"
+              >
+                Outdoors
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link linkdesign"
+                id="mountain-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#mountain"
+                type="button"
+                role="tab"
+                aria-controls="mountain"
+                aria-selected="false"
+              >
+                Mountains
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link linkdesign"
+                id="beach-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#beach"
+                type="button"
+                role="tab"
+                aria-controls="beach"
+                aria-selected="false"
+              >
+                Beach
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link linkdesign"
+                id="stay-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#stay"
+                type="button"
+                role="tab"
+                aria-controls="stay"
+                aria-selected="false"
+              >
+                Unique stays
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link linkdesign"
+                id="categories-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#categories"
+                type="button"
+                role="tab"
+                aria-controls="categories"
+                aria-selected="false"
+              >
+                Categories
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link linkdesign"
+                id="todo-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#todo"
+                type="button"
+                role="tab"
+                aria-controls="todo"
+                aria-selected="false"
+              >
+                Things to do
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link linkdesign"
+                id="tips-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#tips"
+                type="button"
+                role="tab"
+                aria-controls="tips"
+                aria-selected="false"
+              >
+                Travel tips & Inspiration
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link linkdesign"
+                id="apartments-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#apartments"
+                type="button"
+                role="tab"
+                aria-controls="apartments"
+                aria-selected="false"
+              >
+                Airbnb-friendly apartments
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Content section -->
+        <div class="tab-content d-none d-md-block tab-content1" id="myTabContent">
+            <!--Popular-tab-->
+            
+                <div class="tab-pane fade show active" id="popular" role="tabpanel" aria-labelledby="popular-tab">
+                  <div class="row d-flex justify-content-start">
+                      <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+                          <b class="htsize">Canmore</b>
+                          <p class="ptsize">Condo rentals</p>
+                      </div>
+                      <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+                          <b class="htsize">Benalmadena</b>
+                          <p class="ptsize">Vacation rentals</p>
+                      </div>
+                      <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+                          <b class="htsize">Mijas</b>
+                          <p class="ptsize">Vacation rentals</p>
+                      </div>
+                      <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+                          <b class="htsize">Marbella</b>
+                          <p class="ptsize">Cottage rentals</p>
+                      </div>
+                      <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+                          <b class="htsize">Prescott</b>
+                          <p class="ptsize">Vacation rentals</p>
+                      </div>
+                      <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+                          <b class="htsize">Scottsdale</b>
+                          <p class="ptsize">Apartment rentals</p>
+                      </div>
+                      <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+                          <b class="htsize">Lake Martin</b>
+                          <p class="ptsize">Vacation rentals</p>
+                      </div>
+                      <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+                          <b class="htsize">Banff</b>
+                          <p class="ptsize">Apartment rentals</p>
+                      </div>
+                      <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+                          <b class="htsize">Nerja</b>
+                          <p class="ptsize">Apartment rentals</p>
+                      </div>
+                      <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+                          <b class="htsize">Greer</b>
+                          <p class="ptsize">Vacation rentals</p>
+                      </div>
+                      <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+                          <b class="htsize">Lake Havasu City</b>
+                          <p class="ptsize">Condo rentals</p>
+                      </div>
+                      <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+                          <b class="htsize">Lake Powell</b>
+                          <p class="ptsize">Vacation rentals</p>
+                      </div>
+                      <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+                        <b class="htsize">Canmore</b>
+                        <p class="ptsize">Condo rentals</p>
+                    </div>
+                    <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+                        <b class="htsize">Benalmadena</b>
+                        <p class="ptsize">Vacation rentals</p>
+                    </div>
+                    <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+                        <b class="htsize">Mijas</b>
+                        <p class="ptsize">Vacation rentals</p>
+                    </div>
+                    <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+                        <b class="htsize">Marbella</b>
+                        <p class="ptsize">Cottage rentals</p>
+                    </div>
+                    <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+                        <b class="htsize">Prescott</b>
+                        <p class="ptsize">Vacation rentals</p>
+                    </div>
+                    <div class="col-12 col-md-2 d-flex flex-column align-items-left more-content">
+                      <b class="htsize">Lake Powell</b>
+                      <p class="ptsize">Vacation rentals</p>
+                  </div>
+                  <div class="col-12 col-md-2 d-flex flex-column align-items-left more-content">
+                      <b class="htsize">Canmore</b>
+                      <p class="ptsize">Condo rentals</p>
+                  </div>
+                  <div class="col-12 col-md-2 d-flex flex-column align-items-left more-content">
+                    <b class="htsize">Mijas</b>
+                    <p class="ptsize">Vacation rentals</p>
+                </div>
+                <div class="col-12 col-md-2 d-flex flex-column align-items-left more-content">
+                    <b class="htsize">Marbella</b>
+                    <p class="ptsize">Cottage rentals</p>
+                </div>
+                <div class="col-12 col-md-2 d-flex flex-column align-items-left more-content">
+                    <b class="htsize">Prescott</b>
+                    <p class="ptsize">Vacation rentals</p>
+                </div>
+                  <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+                    <div class="btn-container">
+                      <button class="btn btn-link btnstyle" id="show-more-btn">Show more</button>
+                   </div>
+                 </div>
+                  </div>  
+              </div>
+          
+        <!--Arts-tab -->
+      
+        <div class="tab-pane fade" id="arts" role="tabpanel" aria-labelledby="arts-tab">
+          <div class="row d-flex justify-content-start">
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Canmore</b>
+              <p class="ptsize">Condo rentals</p>
+            </div>
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Benalmadena</b>
+              <p class="ptsize">Vacation rentals</p>
+            </div>
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Mijas</b>
+              <p class="ptsize">Vacation rentals</p>
+            </div>
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Marbella</b>
+              <p class="ptsize">Cottage rentals</p>
+            </div>
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Prescott</b>
+              <p class="ptsize">Vacation rentals</p>
+            </div>
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Scottsdale</b>
+              <p class="ptsize">Apartment rentals</p>
+            </div>
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Lake Martin</b>
+              <p class="ptsize">Vacation rentals</p>
+            </div>
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Banff</b>
+              <p class="ptsize">Apartment rentals</p>
+            </div>
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Nerja</b>
+              <p class="ptsize">Apartment rentals</p>
+            </div>
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Greer</b>
+              <p class="ptsize">Vacation rentals</p>
+            </div>
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Lake Havasu City</b>
+              <p class="ptsize">Condo rentals</p>
+            </div>
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Lake Powell</b>
+              <p class="ptsize">Vacation rentals</p>
+            </div>
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Canmore</b>
+              <p class="ptsize">Condo rentals</p>
+            </div>
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Benalmadena</b>
+              <p class="ptsize">Vacation rentals</p>
+            </div>
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Mijas</b>
+              <p class="ptsize">Vacation rentals</p>
+            </div>
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Marbella</b>
+              <p class="ptsize">Cottage rentals</p>
+            </div>
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Prescott</b>
+              <p class="ptsize">Vacation rentals</p>
+            </div>
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Scottsdale</b>
+              <p class="ptsize">Apartment rentals</p>
+            </div>
+          </div>
+      </div>
+    
+    <!--Outdoors-tab -->
+        
+      <div class="tab-pane fade" id="outdoors" role="tabpanel" aria-labelledby="outdoors-tab">
+        <div class="row d-flex justify-content-start">
+          <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+            <b class="htsize">Lake Martin</b>
+            <p class="ptsize">Vacation rentals</p>
+          </div>
+          <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+            <b class="htsize">Banff</b>
+            <p class="ptsize">Apartment rentals</p>
+          </div>
+          <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+            <b class="htsize">Nerja</b>
+            <p class="ptsize">Apartment rentals</p>
+          </div>
+          <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+            <b class="htsize">Greer</b>
+            <p class="ptsize">Vacation rentals</p>
+          </div>
+          <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+            <b class="htsize">Lake Havasu City</b>
+            <p class="ptsize">Condo rentals</p>
+          </div>
+          <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+            <b class="htsize">Lake Powell</b>
+            <p class="ptsize">Vacation rentals</p>
+          </div>
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Canmore</b>
+              <p class="ptsize">Condo rentals</p>
+            </div>
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Benalmadena</b>
+              <p class="ptsize">Vacation rentals</p>
+            </div>
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Mijas</b>
+              <p class="ptsize">Vacation rentals</p>
+            </div>
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Marbella</b>
+              <p class="ptsize">Cottage rentals</p>
+            </div>
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Prescott</b>
+              <p class="ptsize">Vacation rentals</p>
+            </div>
+            <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+              <b class="htsize">Scottsdale</b>
+              <p class="ptsize">Apartment rentals</p>
+            </div>
+          
+           <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+            <b class="htsize">Lake Martin</b>
+            <p class="ptsize">Vacation rentals</p>
+          </div>
+          <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+            <b class="htsize">Banff</b>
+            <p class="ptsize">Apartment rentals</p>
+          </div>
+          <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+            <b class="htsize">Nerja</b>
+            <p class="ptsize">Apartment rentals</p>
+          </div>
+          <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+            <b class="htsize">Greer</b>
+            <p class="ptsize">Vacation rentals</p>
+          </div>
+          <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+            <b class="htsize">Lake Havasu City</b>
+            <p class="ptsize">Condo rentals</p>
+          </div>
+          <div class="col-12 col-md-2 d-flex flex-column align-items-left">
+            <b class="htsize">Lake Powell</b>
+            <p class="ptsize">Vacation rentals</p>
+          </div>
+
+        </div>
+    </div>
+ 
+  <!-- Same for other tabs -->
+        
+</div>
+
+        <!-- Single box section -->
+        <div class="row mt-3">
+          <div class="col-12 col-md-4">
+            <div class="single-box mb-3">
+              <b>Support</b>
+              <ul>
+                <li><a href="#" class="footer-link">Help Center</a></li>
+                <li><a href="#" class="footer-link">AirCover</a></li>
+                <li>
+                  <a href="#" class="footer-link">Anti-discrimination</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Disability support</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Cancellation options</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link"
+                    >Report neighborhood concern</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="single-box mb-3">
+              <b>Hosting</b>
+              <ul>
+                <li><a href="#" class="footer-link">Airbnb your home</a></li>
+                <li><a href="#" class="footer-link">AirCover for Host</a></li>
+                <li><a href="#" class="footer-link">Hosting resources</a></li>
+                <li><a href="#" class="footer-link">Community forum</a></li>
+                <li>
+                  <a href="#" class="footer-link">Hosting responsibly</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Airbnb-friendly apartments</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link">Join a free Hosting class</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="single-box mb-3">
+              <b>Airbnb</b>
+              <ul>
+                <li><a href="#" class="footer-link">Newsroom</a></li>
+                <li><a href="#" class="footer-link">New features</a></li>
+                <li><a href="#" class="footer-link">Careers</a></li>
+                <li><a href="#" class="footer-link">Investors</a></li>
+                <li><a href="#" class="footer-link">Gift cards</a></li>
+                <li>
+                  <a href="#" class="footer-link">Airbnb.org emergency stays</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer links and icons section -->
+        <hr class="border border-gray-900 mt-3" />
+        <div class="d-none d-md-flex justify-content-between mt-2">
+          <p>
+            © 2024 Airbnb, Inc. · <a href="#" class="footer-link">Terms</a> ·
+            <a href="#" class="footer-link">Sitemap</a> ·
+            <a href="#" class="footer-link">Privacy</a> ·
+            <a href="#" class="footer-link">Your Privacy Choices</a>
+          </p>
+          <div>
+            <a href="#" class="footer-link">English (US)</a>
+            <a href="#" class="footer-link">$USD</a>
+            <a href="#" class="footer-icon"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="footer-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="footer-icon"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--scrollable modal in globe icon -->
+    <div class="container">
+      <div
+        class="modal fade"
+        id="scrollableModal"
+        tabindex="-1"
+        aria-labelledby="scrollableModalLabel"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                style="float: left"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <!--nav-item-->
+              <nav>
+                <div class="d-none d-md-flex justify-content-start">
+                  <ul class="nav nav-underline" id="myTab" role="tablist">
+                    <li class="nav-item">
+                      <button
+                        class="nav-link active linkdesign"
+                        id="language-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#language"
+                        type="button"
+                        role="tab"
+                        aria-controls="language"
+                        aria-selected="true"
+                      >
+                        Language and region
+                      </button>
+                    </li>
+                    <li class="nav-item">
+                      <button
+                        class="nav-link linkdesign"
+                        id="currency-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#currency"
+                        type="button"
+                        role="tab"
+                        aria-controls="currency"
+                        aria-selected="false"
+                      >
+                        Currency
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+
+              <!--tab-content-->
+              <div class="tab-content" id="myTabContent">
+                <div
+                  class="tab-pane fade show active tabmove"
+                  id="language"
+                  role="tabpanel"
+                  aria-labelledby="language-tab"
+                >
+                  <div class="card p-2 globecard">
+                    <div class="row d-flex">
+                      <div class="col-10">
+                        <div>
+                          <h5 class="me-2">
+                            Translation <i class="fas fa-language"></i>
+                          </h5>
+                        </div>
+                        <p>
+                          Automatically translate descriptions and reviews to
+                          English.
+                        </p>
+                      </div>
+                      <div
+                        class="col-2 d-flex align-items-center justify-content-center"
+                      >
+                        <div class="form-check form-switch mb-0 togglebtn">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="translationSwitch"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="translationSwitch"
+                          ></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h5 class="hpos">Choose a language and region</h5>
+                  <div class="row d-flex justify-content-start g-2">
+                    <div class="col d-flex flex-column align-items-left">
+                      <button class="first-btn custom-btn">
+                        <h2 class="lhsize">English</h2>
+                        <p class="lpsize">United States</p>
+                      </button>
+                    </div>
+                    <div class="col d-flex flex-column align-items-left">
+                      <button class="custom-btn">
+                        <h2 class="lhsize">Azərbaycan dili</h2>
+                        <p class="lpsize">Azərbaycan</p>
+                      </button>
+                    </div>
+                    <div class="col d-flex flex-column align-items-left">
+                      <button class="custom-btn">
+                        <h2 class="lhsize">Bahasa Indonesia</h2>
+                        <p class="lpsize">Indonesia</p>
+                      </button>
+                    </div>
+                    <div class="col d-flex flex-column align-items-left">
+                      <button class="custom-btn">
+                        <h2 class="lhsize">Bosanski</h2>
+                        <p class="lpsize">Hercegovina</p>
+                      </button>
+                    </div>
+                    <div class="col d-flex flex-column">
+                      <button class="custom-btn">
+                        <h2 class="lhsize">Català</h2>
+                        <p class="lpsize">Espanya</p>
+                      </button>
+                    </div>
+                    <div class="row d-flex justify-content-start g-2">
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Deutsch</h2>
+                          <p class="lpsize">Luxemburg</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Čeština</h2>
+                          <p class="lpsize">Česká republika</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Crnogorski</h2>
+                          <p class="lpsize">Crna Gora</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Dansk</h2>
+                          <p class="lpsize">Danmark</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Deutsch</h2>
+                          <p class="lpsize">Deutschland</p>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col d-flex flex-column align-items-left">
+                      <button class="custom-btn">
+                        <h2 class="lhsize">English</h2>
+                        <p class="lpsize">United States</p>
+                      </button>
+                    </div>
+                    <div class="col d-flex flex-column align-items-left">
+                      <button class="custom-btn">
+                        <h2 class="lhsize">Azərbaycan dili</h2>
+                        <p class="lpsize">Azərbaycan</p>
+                      </button>
+                    </div>
+                    <div class="col d-flex flex-column align-items-left">
+                      <button class="custom-btn">
+                        <h2 class="lhsize">Bahasa Indonesia</h2>
+                        <p class="lpsize">Indonesia</p>
+                      </button>
+                    </div>
+                    <div class="col d-flex flex-column align-items-left">
+                      <button class="custom-btn">
+                        <h2 class="lhsize">Bosanski</h2>
+                        <p class="lpsize">Hercegovina</p>
+                      </button>
+                    </div>
+                    <div class="col d-flex flex-column">
+                      <button class="custom-btn">
+                        <h2 class="lhsize">Català</h2>
+                        <p class="lpsize">Espanya</p>
+                      </button>
+                    </div>
+
+                    <div class="row d-flex justify-content-start g-2">
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Deutsch</h2>
+                          <p class="lpsize">Luxemburg</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Čeština</h2>
+                          <p class="lpsize">Česká republika</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Crnogorski</h2>
+                          <p class="lpsize">Crna Gora</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Dansk</h2>
+                          <p class="lpsize">Danmark</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Deutsch</h2>
+                          <p class="lpsize">Deutschland</p>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col d-flex flex-column align-items-left">
+                      <button class="custom-btn">
+                        <h2 class="lhsize">English</h2>
+                        <p class="lpsize">United States</p>
+                      </button>
+                    </div>
+                    <div class="col d-flex flex-column align-items-left">
+                      <button class="custom-btn">
+                        <h2 class="lhsize">Azərbaycan dili</h2>
+                        <p class="lpsize">Azərbaycan</p>
+                      </button>
+                    </div>
+                    <div class="col d-flex flex-column align-items-left">
+                      <button class="custom-btn">
+                        <h2 class="lhsize">Bahasa Indonesia</h2>
+                        <p class="lpsize">Indonesia</p>
+                      </button>
+                    </div>
+                    <div class="col d-flex flex-column align-items-left">
+                      <button class="custom-btn">
+                        <h2 class="lhsize">Bosanski</h2>
+                        <p class="lpsize">Hercegovina</p>
+                      </button>
+                    </div>
+                    <div class="col d-flex flex-column">
+                      <button class="custom-btn">
+                        <h2 class="lhsize">Català</h2>
+                        <p class="lpsize">Espanya</p>
+                      </button>
+                    </div>
+                    <div class="row d-flex justify-content-start g-2">
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Deutsch</h2>
+                          <p class="lpsize">Luxemburg</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Čeština</h2>
+                          <p class="lpsize">Česká republika</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Crnogorski</h2>
+                          <p class="lpsize">Crna Gora</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Dansk</h2>
+                          <p class="lpsize">Danmark</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Deutsch</h2>
+                          <p class="lpsize">Deutschland</p>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="tab-pane fade"
+                  id="currency"
+                  role="tabpanel"
+                  aria-labelledby="currency-tab"
+                >
+                  <h5 class="hpos">Choose a currency</h5>
+                  <div class="row d-flex justify-content-start g-1">
+                    <div class="row d-flex justify-content-start g-1">
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">United States dollar</h2>
+                          <p class="lpsize">USD - $</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Australian dollar</h2>
+                          <p class="lpsize">AUD - $</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Brazilian real</h2>
+                          <p class="lpsize">BRL - R$</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Bulgarian lev</h2>
+                          <p class="lpsize">BGN - лв.</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Canadian dollar</h2>
+                          <p class="lpsize">CAD - $</p>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="row d-flex justify-content-start g-1">
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Chilean peso</h2>
+                          <p class="lpsize">CLP - $</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Chinese yuan</h2>
+                          <p class="lpsize">CNY - ￥</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Costa Rican colon</h2>
+                          <p class="lpsize">CRC - ₡</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Croatian kuna</h2>
+                          <p class="lpsize">HRK - kn</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Czech koruna</h2>
+                          <p class="lpsize">CZK - Kč</p>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="row d-flex justify-content-start g-1">
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">United States dollar</h2>
+                          <p class="lpsize">USD - $</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Australian dollar</h2>
+                          <p class="lpsize">AUD - $</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Brazilian real</h2>
+                          <p class="lpsize">BRL - R$</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Bulgarian lev</h2>
+                          <p class="lpsize">BGN - лв.</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Canadian dollar</h2>
+                          <p class="lpsize">CAD - $</p>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="row d-flex justify-content-start g-1">
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Chilean peso</h2>
+                          <p class="lpsize">CLP - $</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Chinese yuan</h2>
+                          <p class="lpsize">CNY - ￥</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Costa Rican colon</h2>
+                          <p class="lpsize">CRC - ₡</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Croatian kuna</h2>
+                          <p class="lpsize">HRK - kn</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Czech koruna</h2>
+                          <p class="lpsize">CZK - Kč</p>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="row d-flex justify-content-start g-1">
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">United States dollar</h2>
+                          <p class="lpsize">USD - $</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Australian dollar</h2>
+                          <p class="lpsize">AUD - $</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Brazilian real</h2>
+                          <p class="lpsize">BRL - R$</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Bulgarian lev</h2>
+                          <p class="lpsize">BGN - лв.</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Canadian dollar</h2>
+                          <p class="lpsize">CAD - $</p>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="row d-flex justify-content-start g-1">
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Chilean peso</h2>
+                          <p class="lpsize">CLP - $</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Chinese yuan</h2>
+                          <p class="lpsize">CNY - ￥</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Costa Rican colon</h2>
+                          <p class="lpsize">CRC - ₡</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column align-items-left">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Croatian kuna</h2>
+                          <p class="lpsize">HRK - kn</p>
+                        </button>
+                      </div>
+                      <div class="col d-flex flex-column">
+                        <button class="custom-btn">
+                          <h2 class="lhsize">Czech koruna</h2>
+                          <p class="lpsize">CZK - Kč</p>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--endof modal body-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"
+      ></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>

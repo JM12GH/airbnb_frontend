@@ -1,0 +1,232 @@
+body{
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+.container-fluid{
+  width:100%;
+}
+.dropdown-menu-end {
+  max-width: 70px; 
+  font-size: 0.7rem; 
+  padding: 0.2rem 0; 
+}
+.divider-vertical {
+    border-left: 1px solid rgba(0, 0, 0, .125);
+    height: 60px; 
+    margin:  auto 2px; 
+  }
+  .navpos{
+
+    margin-left: 90px;
+  }
+  .hsize{
+    font-size: 14px;
+    color: black;
+  }
+
+  .psize{
+    font-size: 10px;
+    color: lightslategrey;
+  }
+  .navbar-nav .nav-link {
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+    padding: 0;
+    cursor: pointer;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+}
+
+
+  .card {
+    border: none; /* Ensures no border on all cards */
+}
+
+  footer {
+    
+    background:#f2f2f2;
+    padding: 16px 0;
+    
+    }
+  
+.nav-underline {
+  list-style-type: none; /* Remove default list styles */
+}
+.linkdesign {
+  font-size: 15px; /* Adjust font size for nav links */
+  text-align: left;
+  color: #65696c;
+  cursor: pointer;
+  
+}
+
+.nav-link.footer.active,
+.nav-link.footer:hover {
+  color: #000000; /* Active and hover color */
+  text-decoration: none;
+}
+.tab-content1 {
+  margin-top: 50px;
+
+}
+
+.htsize{
+  font-size: 15px; 
+  color: #000;
+}
+.ptsize{
+ font-size: 15px;
+  color: lightslategrey;
+}
+
+.text-muted {
+  font-size: 10px; 
+  color: #777; 
+}
+
+.single-box h2 {
+  font-size: 1rem;
+}
+
+.single-box ul {
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0;
+}
+.single-box ul li {
+  margin: 4px 0; /* Optional: add some spacing between list items */
+}
+
+.single-box ul li a {
+  text-decoration: none;
+  color: black; 
+  display: block;
+}
+
+.footer-link {
+  color: black; /* Default link color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.footer-link:hover {
+  color: #000; /* Black color on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+.footer-icon {
+  color: black; /* Default icon color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.footer-icon:hover {
+  color: #000; /* Black color on hover */
+}
+
+.globecard{
+  background-color: rgb(234, 231, 231);
+  width: 26rem;
+  height: 5rem;
+  margin-top: 50px;
+}
+.globecard h5{
+  font-size: 15px;
+}
+.globecard p{
+  font-size: 12px;
+}
+.togglebtn{
+  transform: scale(1.5);
+}
+.hpos{
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.custom-btn {
+  border: none; 
+  background-color: transparent;
+  align-items: flex-start; 
+  text-align: left; 
+}
+.custom-btn:hover {
+  background-color: rgb(236, 236, 236); 
+}
+.first-btn {
+  border: 0.7px solid #000; 
+}
+.lhsize{
+  margin-top: 5px;
+  font-size: 15px; 
+  color: #000;
+  
+}
+.lpsize{
+  font-size: 15; 
+  color: #777; 
+}
+
+.owl-carousel .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:0px; 
+}
+
+
+.owlbtn {
+  padding: 4px 6px; 
+  background-color: transparent; 
+  border: none; 
+}
+
+
+.owlbtn:hover {
+  background-color: transparent; 
+  box-shadow: none; 
+}
+
+
+#prev-btn, #next-btn {
+  z-index: 1;
+  margin-top: -18px; /* Adjust this value to align the buttons vertically */
+
+}
+
+.more-content {
+  display: none !important;
+}
+.show-more-content {
+  display: flex !important;
+}
+
+.btnstyle{
+  background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btnstyle:hover {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
